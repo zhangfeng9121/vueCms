@@ -9,24 +9,19 @@ import homeContainer from './components/tabbar/homeContainer.vue'
 import memberContainer from './components/tabbar/memberContainer.vue'
 import shopContainer from './components/tabbar/shopContainer.vue'
 import searchContainer from './components/tabbar/searchContainer.vue'
+import newslist from './components/new/newslist.vue'
+import newsInfo from './components/new/newsInfo.vue'
 
 // 3. 创建路由对象
 var router = new VueRouter({
     routes: [
-        // {
-        //     path: '/account',
-        //     component:account,
-        //     children: [
-        //         {path:'login', component:zLogin},
-        //         {path:'register', component:register},
-        //     ]
-        // },
         { path: '/', redirect: '/homeContainer'},
         { path: '/homeContainer', component: homeContainer},
         { path: '/memberContainer', component: memberContainer},
         { path: '/shopContainer', component: shopContainer},
-        { path: '/searchContainer', component: searchContainer}
-        
+        { path: '/searchContainer', component: searchContainer},
+        { path: '/homeContainer/news', component: newslist},
+        { path: '/homeContainer/news/newsInfo/:id', component: newsInfo},
     ],
     linkActiveClass: 'mui-active'
 });

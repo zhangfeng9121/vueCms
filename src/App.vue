@@ -41,6 +41,7 @@
         padding-top: 40px;
         font-size: 15px;
         overflow-x: hidden;
+        padding-bottom: 50px;
     }
 
     .v-enter{

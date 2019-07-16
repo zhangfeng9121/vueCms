@@ -9,9 +9,9 @@
 		
 		<!-- 图标视图 -->
 		<ul class="mui-table-view mui-grid-view mui-grid-9">
-            <li class="mui-table-view-cell mui-media mui-col-xs-4"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4"><router-link to="/homeContainer/news">
                     <img src="../../images/menu1.png" alt="">
-                    <div class="mui-media-body">新闻资讯</div></a></li>
+                    <div class="mui-media-body">新闻资讯</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4"><a href="#">
                     <!-- <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span> -->
                     <!-- <span class="mui-badge">5</span> -->
