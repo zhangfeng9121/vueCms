@@ -4,9 +4,9 @@ import Vue from 'vue'
 // 使用mint-ui组件库
 import 'mint-ui/lib/style.css'
 // header
-import { Header , Swipe, SwipeItem, Lazyload} from 'mint-ui';
+import { Header , Swipe, SwipeItem, Lazyload, Button} from 'mint-ui';
 Vue.component(Header.name, Header);
-
+Vue.component(Button.name, Button);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.use(Lazyload);
@@ -33,6 +33,10 @@ import login from './App.vue'
 
 // 导入路由
 import router from './router.js'
+
+// 缩略图显示组件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 var vm = new Vue({
     el: '#app',

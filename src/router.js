@@ -12,6 +12,8 @@ import searchContainer from './components/tabbar/searchContainer.vue'
 import newslist from './components/new/newslist.vue'
 import newsInfo from './components/new/newsInfo.vue'
 import photograph from './components/photographs/photograph.vue'
+import photoInfo from './components/photographs/photoInfo.vue'
+import goodList from './components/goods/goodList.vue'
 
 // 3. 创建路由对象
 var router = new VueRouter({
@@ -23,7 +25,9 @@ var router = new VueRouter({
         { path: '/searchContainer', component: searchContainer},
         { path: '/homeContainer/news', component: newslist},
         { path: '/homeContainer/news/newsInfo/:id', component: newsInfo},
-        { path: '/photograph', component: photograph}
+        { path: '/homeContainer/photograph', component: photograph},
+        { path: '/homeContainer/photoInfo/:id', component: photoInfo},
+        { path: '/homeContainer/goodList', component: goodList},
     ],
     linkActiveClass: 'mui-active'
 });
