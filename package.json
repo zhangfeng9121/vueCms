@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --port 3000 --contentBase src --hot",
+    "dev": "webpack-dev-server --open --port 3600 --contentBase src --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
