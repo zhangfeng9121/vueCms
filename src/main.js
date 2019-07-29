@@ -4,11 +4,12 @@ import Vue from 'vue'
 // 使用mint-ui组件库
 import 'mint-ui/lib/style.css'
 // header
-import { Header , Swipe, SwipeItem} from 'mint-ui';
+import { Header , Swipe, SwipeItem, Lazyload} from 'mint-ui';
 Vue.component(Header.name, Header);
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.use(Lazyload);
 
 // 导入mui样式
 import './lib/mui/css/mui.min.css'
