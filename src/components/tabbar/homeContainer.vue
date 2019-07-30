@@ -1,11 +1,7 @@
 <template>
 	<div>
 		<!-- 轮播区域 -->
-		<mt-swipe :auto="4000">
-		  <mt-swipe-item>1</mt-swipe-item>
-		  <mt-swipe-item>2</mt-swipe-item>
-		  <mt-swipe-item>3</mt-swipe-item>
-		</mt-swipe>
+		<cmt-swipe></cmt-swipe>
 		
 		<!-- 图标视图 -->
 		<ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -34,24 +30,25 @@
 </template>
 
 <script>
-	
+import swipe from '../subcomponents/swipe.vue'
+export default {
+    data() {
+        return {
+
+        }
+    },
+
+    methods: {
+
+    },
+
+    components: {
+        'cmt-swipe': swipe
+    }
+}
 </script>
 
 <style>
-	.mint-swipe {
-		height: 200px;
-	}
-
-	.mint-swipe .mint-swipe-items-wrap .mint-swipe-item:nth-child(1) {
-		background-color: #f00;
-	}
-	.mint-swipe .mint-swipe-items-wrap .mint-swipe-item:nth-child(2) {
-		background-color: #0f0;
-	}
-	.mint-swipe .mint-swipe-items-wrap .mint-swipe-item:nth-child(3) {
-		background-color: #00f;
-	}
-
 	.mui-grid-view.mui-grid-9 {
 		background-color: #fff;
 		border: none;

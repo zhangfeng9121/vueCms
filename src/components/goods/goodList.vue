@@ -1,19 +1,19 @@
 <template>
 	<div id="goodList">
-		<div class="item" v-for="item in goods" :key="item.id">
+		<router-link class="item" v-for="item in goods" :key="item.id" tag="div" to="/homeContainer/goodInfo">
 			<img :src="item.path" :alt="item.alt">
 			<p class="goodTitle">{{item.title}}</p>
 			<div class="info">
 				<div class="price">
-					<span class="new">{{item.nowM}}</span>
-					<span class="old">{{item.oldM}}</span>
+					<span class="new">￥{{item.nowM}}</span>
+					<span class="old">￥{{item.oldM}}</span>
 				</div>
 				<div class="ld">
 					<span>{{item.desc}}</span>
 					<span>{{item.many}}</span>
 				</div>
 			</div>
-		</div>
+		</router-link>
 	</div>
 </template>
 
@@ -36,7 +36,7 @@ export default {
 
 <style scoped="goodList.vue" lang="less">
 	#goodList {
-		padding: 3px;
+		padding: 5px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -49,6 +49,35 @@ export default {
 			img {
 				height: 200px;
 				width: 100%;
+				padding: 1px;
+				box-shadow: 0 0 5px #ccc;
+			}
+
+			.goodTitle {
+				color: #222;
+				line-height: 16px;
+				padding: 5px 0;
+				margin: 0;
+			}
+
+			.info {
+				.price {
+					font-size: 13px;
+					.new {
+						color: red;
+					}
+
+					.old {
+						color: #ccc;
+					}
+				}
+			}
+
+			.ld {
+				color: #333;
+				font-size: 14px;
+				display: flex;
+				justify-content: space-between;
 			}
 		}
 	}
