@@ -38,12 +38,36 @@ import router from './router.js'
 import VuePreview from 'vue-preview'
 Vue.use(VuePreview)
 
+// 导入vuex
+import Vuex from 'vuex'
+Vue.use(Vuex)
+var store = new Vuex.Store({
+    state: {
+        count: 0,
+    },
+    mutations: {
+        increment(state) {
+            state.count ++;
+        },
+        substract(state, c) {
+            state.count -= c;
+        }
+    },
+    getters: {
+        optCount(state) {
+            return "getters=当前数据为：" + state.count;
+        }
+    }
+})
+
+
 var vm = new Vue({
     el: '#app',
     data: {},
     methods: {},
     render: c => c(login),
-    router:router
+    router:router,
+    store
 });
 
 

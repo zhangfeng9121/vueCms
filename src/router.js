@@ -15,6 +15,7 @@ import photograph from './components/photographs/photograph.vue'
 import photoInfo from './components/photographs/photoInfo.vue'
 import goodList from './components/goods/goodList.vue'
 import goodInfo from './components/goods/goodInfo.vue'
+import calcu from './components/tVuex/calculatorVuex.vue'
 
 // 3. 创建路由对象
 var router = new VueRouter({
@@ -30,6 +31,7 @@ var router = new VueRouter({
         { path: '/homeContainer/photoInfo/:id', component: photoInfo},
         { path: '/homeContainer/goodList', component: goodList},
         { path: '/homeContainer/goodInfo', component: goodInfo},
+        { path: '/homeContainer/calcu', component: calcu},
     ],
     linkActiveClass: 'mui-active'
 });

@@ -22,9 +22,9 @@
             <li class="mui-table-view-cell mui-media mui-col-xs-4"><a href="#">
                     <img src="../../images/menu5.png" alt="">
                     <div class="mui-media-body">视频专区</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4"><router-link to="/homeContainer/calcu">
                     <img src="../../images/menu6.png" alt="">
-                    <div class="mui-media-body">联系我们</div></a></li>
+                    <div class="mui-media-body">联系我们</div></router-link></li>
         </ul> 
 	</div>
 </template>
