@@ -38,12 +38,15 @@ import router from './router.js'
 import VuePreview from 'vue-preview'
 Vue.use(VuePreview)
 
+var carCount = parseInt(localStorage.getItem("carCount") || '0') ;
+
 // 导入vuex
 import Vuex from 'vuex'
 Vue.use(Vuex)
 var store = new Vuex.Store({
     state: {
         count: 0,
+        carCount: carCount
     },
     mutations: {
         increment(state) {
@@ -51,11 +54,20 @@ var store = new Vuex.Store({
         },
         substract(state, c) {
             state.count -= c;
+        },
+        addCarCount(state, count) {
+            // JSON.stringify() 转换为字符串
+            // JSON.parse() 将字符串转换为对象
+            state.carCount += count;
+            localStorage.setItem("carCount", state.carCount.toString())
         }
     },
     getters: {
         optCount(state) {
             return "getters=当前数据为：" + state.count;
+        },
+        getCarCount(state) {
+            return state.carCount;
         }
     }
 })

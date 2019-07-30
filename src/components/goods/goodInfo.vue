@@ -57,16 +57,18 @@ import numberBox from '../subcomponents/number.vue'
 export default {
     data() {
         return {
-            ballShow: false
+            ballShow: false,
+            num: 0
         }
     },
 
     methods: {
         addShopCar() {
             this.ballShow = true;
+            this.$store.commit('addCarCount', this.num);
         },
         getNum(num) {
-            console.log("===" + num);
+            this.num = num;
         },
         beforeEnter(el) {
             el.style.transform = "translate(0, 0)";
